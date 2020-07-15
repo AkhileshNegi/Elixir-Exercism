@@ -1,9 +1,7 @@
 defmodule Word do
   @spec count(String.t()) :: map
   def count(sentence) do
-  	  map = %{}
   	String.downcase(sentence) |> String.split(" ") 
-  	|> Enum.each(fn(s) -> new_map = Dict.put_new(map, :new_val, s) end)
-IO.puts(new_map[:new_val])
+  	|> Enum.each(fn(s) -> IO.puts(s) end)
   	  end
 end
