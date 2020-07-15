@@ -1,0 +1,6 @@
+defmodule Word do
+  @spec count(String.t()) :: map
+  def count(sentence) do
+  IO.inspect sentence
+  end
+end
