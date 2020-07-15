@@ -3,7 +3,6 @@ defmodule Word do
   def count(sentence) do
   	  map = %{}
   	String.downcase(sentence) |> String.split(" ") 
-  	|> Enum.each(fn(s) -> new_map = Dict.put_new(map, s, "1") end)
-IO.puts(new_map[:new_val])
+  	|> Enum.each(fn(s) -> s end)
   	  end
 end
