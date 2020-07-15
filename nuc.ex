@@ -4,11 +4,9 @@ defmodule DNA do
             G: C,
             C: G,
             T: A,
-            A: U,
+            A: U
             }
     def to_rna(dna) do
-      Enum.each(dna, fn x -> IO.puts"#{rna.x}" end)
-    dna|>Enum.map(fn ch -> #{rna[ch]}
-       end)
+    Enum.each(dna, fn x -> fetch(%{G: C,C: G,T: A,A: U}, x) end)
     end
 end
