@@ -10,10 +10,11 @@ defmodule SpaceAge do
       "Uranus" => 84.016846,
       "Neptune" => 164.79132
     }
-    IO.puts"Multiplier is: #{planet["#{inplanet}"]}"
     minutes = seconds/60
     hours = minutes /60
     days = hours/ 24
-    IO.puts"Age: #{days}"
+    multi = planet["#{inplanet}"]
+    actual_age = days*multi
+    IO.puts"Age: #{actual_age}"
   end
 end
