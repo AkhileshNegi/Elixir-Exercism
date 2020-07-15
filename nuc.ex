@@ -7,8 +7,7 @@ defmodule DNA do
             'A'=>'U',
             }
     def to_rna(dna) do
-    dna|>Enum.each(fn ch -> 
-      IO.puts(rna[ch])
+    dna|>Enum.map(fn ch -> #{rna[ch]}
        end)
     end
 end
