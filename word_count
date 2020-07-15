@@ -1,6 +1,7 @@
 defmodule Word do
   @spec count(String.t()) :: map
   def count(sentence) do
-  IO.inspect sentence
+  	String.downcase(sentence) |> String.split(" ") |> IO.inspect
+
   end
 end
