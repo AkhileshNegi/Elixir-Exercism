@@ -8,8 +8,8 @@ defmodule Bob do
 			"Anything" => "Whatever"
 			}
 		iscapital = input =~ ~r(^[^a-z]*$)
+		lastchar = String.ends_with?("#{input}", "?")
 		if iscapital === true do
-			lastchar = String.ends_with?("#{input}", "?")
 			if lastchar === true do
 				expression = "Yell and Question"
 				IO.puts"#{reaction["#{expression}"]}"
