@@ -1,13 +1,19 @@
 defmodule Bob do
-  def hey(input) do
-	input =~ ~r(^[^a-z]*$)
-	exp = "Yell"
-  reaction = %{
-  "Yell" => "Whoa, Chill out!",
-  "Question" => "Sure",
-  "Yell and Question" => "Calm down, I know what I'm doing!",
-  "nothing" => "Fine. Be that way"
-}
-	IO.puts"#{reaction["#{exp}"]}"
-  end
+	def hey(input) do
+		reaction = %{
+			"Question" => "Sure",
+			"Yell" => "Whoa, Chill out!",
+			"Yell and Question" => "Calm down, I know what I'm doing!",
+			"Nothing" => "Fine. Be that way",
+			"Anything" => "Whatever"
+			}
+		bol = input =~ ~r(^[^a-z]*$)
+		if bol===true do
+			expression = "Yell"
+		IO.puts"#{reaction["#{expression}"]}"
+		else
+			expression = "Nothing"
+		IO.puts"#{reaction["#{expression}"]}"
+		end
+	end
 end
