@@ -9,7 +9,11 @@ defmodule Bob do
 			}
 		iscapital = input =~ ~r(^[^a-z]*$)
 		lastchar = String.ends_with?("#{input}", "?")
+		length = String.length("#{input}")
 		cond do 
+		length == 0 ->
+			expression = "Nothing"
+			IO.puts"#{reaction["#{expression}"]}"
 		iscapital === true ->
 			if lastchar === true do
 				expression = "Yell and Question"
@@ -19,10 +23,10 @@ defmodule Bob do
 				IO.puts"#{reaction["#{expression}"]}"
 			end
 		lastchar === true ->
-				expression = "Question"
-				IO.puts"#{reaction["#{expression}"]}"
+			expression = "Question"
+			IO.puts"#{reaction["#{expression}"]}"
 		true->
-			expression = "Nothing"
+			expression = "Anything"
 			IO.puts"#{reaction["#{expression}"]}"
 		end
 	end
