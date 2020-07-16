@@ -16,7 +16,11 @@ defmodule Roman do
 			"I" => 1,
 			}
 		one = trunc(rem(number,10))
-		tens = trunc(number /10)
-		thousands = trunc(number /100)
+		number= trunc(number / 10)
+		tens = trunc(rem(number,10))
+		number= trunc(number / 10)
+		hundreds = trunc(rem(number,10))
+		number= trunc(number / 10)
+		thousands = trunc(rem(number,10))
 	end
 end
