@@ -15,6 +15,7 @@ defmodule SpaceAge do
     days = hours/ 24
     multi = planet["#{inplanet}"]
     actual_age = days*multi
-    IO.puts"Age: #{actual_age}"
+    IO.puts"Actual Age : #{days}"
+    IO.puts"Age in Planet #{inplanet} : #{actual_age}"
   end
 end
